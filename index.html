@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        <div>我很帅</div>
+        {{message}}
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        //vue实现双向数据绑定：
+            //1、模版的编译，
+            //2、object.defineProperty get和set 数据劫持,观察数据变化 
+            //3、watcher进行模版编译和 数据劫持的关联
+        let vm = new Vue({
+            el : '#app',
+            data:{
+                message:"hello"
+            }
+        })
+    </script>
+</body>
+</html>
